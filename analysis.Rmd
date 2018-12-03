@@ -20,7 +20,7 @@ library(xts)
 ```{r}
 # Apple Inc.
 # Pull data from Yahoo finance 
-getSymbols("AAPL", from='2014-11-30', to='2018-11-30')
+getSymbols("AAPL", from = '2014-11-30', to = '2018-11-30')
 ```
 
 ```{r}
