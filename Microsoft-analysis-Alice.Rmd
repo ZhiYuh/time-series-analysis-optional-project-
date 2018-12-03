@@ -1,7 +1,7 @@
 ---
-title: "analysis"
+title: "Alice analysis"
 author: "Zhi Yuh Ou Yang (301322064)"
-date: "11/30/2018"
+date: "12/2/2018"
 output: html_document
 ---
 
@@ -18,14 +18,14 @@ library(xts)
 ```
 
 ```{r}
-# Apple Inc.
+# Microsoft Corporation
 # Pull data from Yahoo finance 
-getSymbols("AAPL", from = '2014-12-01', to = '2018-12-01')
+getSymbols("MSFT", from = '2016-12-01', to = '2018-12-01')
 ```
 
 ```{r}
 # Select the relevant close price series
-stock_prices <- AAPL[, 4]
+stock_prices <- MSFT[, 4]
 ```
 
 ```{r}
@@ -46,7 +46,7 @@ print(adf.test(stock))
 
 ```{r}
 # Split the dataset in two parts - training and testing
-breakpoint <- floor(nrow(stock)*(3/4))
+breakpoint <- floor(nrow(stock)*(1/2))
 ```
 
 ```{r}
